@@ -1,0 +1,69 @@
+<@ folder="gen/java" filename="Test.txt" test="Tableau.name != null">
+class Test
+{
+	<@set item="array" value="['HTML', 'JS', 'CSS'];">
+	<@for item="i" begin="0" end="array.length - 1" step="1">
+		<@get item="array[i]">, 
+	<@for:end>
+	
+	<@set item="int" value="1">
+	<@get item="int + 1">
+	
+	<@set item="string" value="'1'" scope="global">
+	<@get item="string + 1">
+	
+	<@set item="double" value="2.5">
+	<@get item="double">
+	
+	private List<String> liste = new ArrayList<>();
+
+	public void init()
+	{
+		<@foreach item="header" items="Tableau.headers">
+			liste.add(<@get item="header.name">);
+			
+		<@foreach:end>
+		<@if test="Tableau.name == null">
+			liste.add("No name");
+		<@if:other test="Tableau.name == ''">
+			liste.add("Empty name");
+		<@if:neither>
+			liste.add(<@get item="Tableau.name">);
+		<@if:end>
+		
+		<@if test="Tableau.prix.length == 2">
+			liste.add("Taille 2");
+		<@if:end>
+		
+		<@set item="aaa" value="'4'" scope="global">
+		<@if test="aaa == '4'">
+			liste.add("ייי !");
+		<@if:end>
+		<@if test="Tableau.name == 'Tableau 1'">
+			liste.add("NAME !");
+		<@if:end>
+		<@if test="Tableau.prix[1] == 12.00">
+			liste.add("prix");
+		<@if:end>
+		
+		<@if test="Tableau.property.color == 'I\'m red'">
+			RED
+		<@if:end>
+		
+		<@set item="boolean" value="false">
+		<@while test="boolean == true" do="yes">
+			Coucou
+			<@if test="boolean == true">
+				<@set item="boolean" value="false">
+			<@if:neither>
+				<@set item="boolean" value="true">
+			<@if:end>
+		<@while:end>
+		
+		Cette valeur vaut<@if 
+						test="Button.action == null" >1
+				  <@if:other test="Button.action != null"> 2
+				  <@if:end> et celle ci 0
+	}
+
+}

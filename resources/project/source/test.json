@@ -1,0 +1,20 @@
+{
+	"Tableau": {
+		"name": "Tableau 1",
+		"property": {
+			"color": "I'm red",
+			"size": 10,
+			"sortable": true,
+			"others": null
+		},
+		"headers": [
+			{"name": "header1", "id": "1"},
+			{"name": "header2", "id": "2"}
+		],
+		"prix": [56.60, 12.00]
+	},
+	"Button": {
+		"name": "Cliquez moi",
+		"action": "valider"
+	}
+}

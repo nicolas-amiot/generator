@@ -1,0 +1,27 @@
+class Test
+{
+HTML, JS, CSS, 	
+2	
+11	
+2.5	
+	private List<String> liste = new ArrayList<>();
+
+	public void init()
+	{
+		liste.add(header1);		
+		liste.add(header2);		
+		liste.add(Tableau 1);		
+		liste.add("Taille 2");
+		
+		liste.add("ייי !");
+		liste.add("prix");
+		
+		RED
+		
+		Coucou
+		Coucou
+		
+		Cette valeur vaut 2 et celle ci 0
+	}
+
+}
